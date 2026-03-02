@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixturePulse</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>FixturePulse</h1>
+        <p>Minimal live fixture tracker for Europe’s top 5 leagues.</p>
+      </header>
+
+      <section class="controls" aria-label="Fixture controls">
+        <label for="leagueFilter">League</label>
+        <select id="leagueFilter">
+          <option value="all">All Leagues</option>
+          <option value="Premier League">Premier League</option>
+          <option value="La Liga">La Liga</option>
+          <option value="Ligue 1">French Ligue 1</option>
+          <option value="Bundesliga">Bundesliga</option>
+          <option value="Serie A">Serie A</option>
+        </select>
+        <button id="refreshBtn" type="button">Get latest updates</button>
+      </section>
+
+      <section id="fixtureList" class="fixture-list" aria-live="polite"></section>
+    </main>
+
+    <template id="fixtureTemplate">
+      <article class="fixture-card">
+        <div>
+          <h2 class="teams"></h2>
+          <p class="meta"></p>
+        </div>
+        <div class="score-wrap">
+          <p class="status"></p>
+          <p class="score"></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
